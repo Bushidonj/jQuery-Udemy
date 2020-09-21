@@ -26,8 +26,8 @@
 			nav li:first-child 	{ background-image:url(imagem/futebol.png) } 
 			nav li:nth-child(2) { background-image:url(imagem/basquete.png) }
 
-			#primeira     {  width: 300px; height: 500px; background-color:aquamarine }	
-			#segunda      {  width: 300px; height: 500px; background-color:blueviolet }
+			#primeira     {  width: 300px; height: 800px; background-color:aquamarine }	
+			#segunda      {  width: 300px; height: 800px; background-color:blueviolet }
 
         </style>
          
@@ -35,9 +35,12 @@
         <script>		
 			//criando uma animação ( clica na bola de basquete) usamos o elemento <div ... esta no corpo a baixo do </nav> tambem trbalhamos no css com #primeira.... & #segunda //
 			$( function(e) { 	
-               $('nav li:nth-child(2)').click( function(e) {
-				   $('html,body').animate( {scrollTop:50}, 1000);
-			   });
+			  //codigo para saber o tamanho do elemento #segunda//
+				$('nav li:nth-child(2)').click( function(e) {
+				//codigo para a barra subir( animação) completamente//
+				$('html,body').animate( {scrollTop:$('#segunda').offset().top}, 1000);
+			 
+			});
 			});			
 		</script>   
     </head>

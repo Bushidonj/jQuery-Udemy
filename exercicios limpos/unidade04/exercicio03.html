@@ -7,7 +7,12 @@
         <script src="jquery-3.2.1.min.js"></script>
         <script>
 			$( function(e) {
-		
+           //* para aparecer o nome da imagem quando o mause esta por cima //
+                $("a").attr("title","Alpes Suiços");
+            //* _blank para quando clicar na imagem aparecer em outra ABA da pagina//
+                $("a").attr("target","_blank");
+           //*para ANULAR o _blank sem revomelo //
+                $("a").removeAttr("target");
 			} )
 		</script>
         

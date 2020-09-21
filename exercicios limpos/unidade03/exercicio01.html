@@ -4,13 +4,15 @@
         <meta charset="UTF-8">
         <title>Curso jQuery Fundamental</title> 
         
+        <script scr="jquery-3.2.1.min.js"></script>
         <script>
-			function inicial() {
-                alert("Página carregada com sucesso")
-            }
-            
-            window.onload = inicial;
-		</script>
+          $(function(e) {
+              alert("Pronto, seu DOM foi carregado 3");
+           });
+
+
+        </script>
+			
     </head>
 
     <body>

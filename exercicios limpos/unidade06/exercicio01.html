@@ -6,7 +6,36 @@
         
         <script src="jquery-3.2.1.min.js"></script>
         <script>
-					
+				$(function() {
+            //codigo para clicar no botão e aparecer um aviso na pagina para quem esta navegando//
+                    $('#cursohtml').click( function(){
+                alert("clicou no botão HTML");
+                 })
+
+                 $('#cursocss').click( function(){
+                alert("clicou no botão CSS");
+                 })
+
+            //codigo para avisar que passou o mause da posição especifica na pagina //
+                 function mostrarMensagem( ){
+                alert("passou o mause por cima do botão css");
+               //codigo para ativai aviso so uma vez depois de carregar a pagina//
+                $('#cursocss').off("mauseover", mostrarMensagem);      
+                }
+
+                function mostrarMensagem2( ){
+                alert("clicou no botão css");
+                     
+               
+            }
+
+                 
+                $('#cursocss').on("mauseover", mostrarMensagem);
+                $('#cursocss').on("click", mostrarMensagem); 
+                 })
+
+
+                
 		</script>        
     </head>
 

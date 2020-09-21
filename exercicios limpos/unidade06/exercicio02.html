@@ -9,7 +9,16 @@
         
         <script src="jquery-3.2.1.min.js"></script>
         <script>
-			
+			$(function(e) {
+                $('#janela').hide();
+
+                $('#mostrar').click(function(e) {
+                    $('#janela').show();
+             }); 
+                $('#esconder').click(function(e) {
+                    $('#janela').hide();
+             });               
+            })
 		</script>        
     </head>
 
