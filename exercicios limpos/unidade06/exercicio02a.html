@@ -9,23 +9,25 @@
         
         <script src="jquery-3.2.1.min.js"></script>
         <script>
-        //evento de click para mostrar ou esconder o conteudo //
+        //evento de passar o mause e aparecer a imagem//
         $(function(e) {
                 $('#janela').hide();
 
-                $('#mostrar').click(function(e) {
+                $('#mostrar').hover(mostrarElemento,esconderElemento);
+             })
+                function mostrarElemento(e) {
                     $('#janela').show();
-             }); 
-                $('#esconder').click(function(e) {
+             }; 
+                function esconderElemento(e) {
                     $('#janela').hide();
-             });               
-            })
+             };               
+            
 		</script>        
     </head>
 
     <body>
         <input type="button" id="mostrar" 	value="Mostrar" />
-        <input type="button" id="esconder" 	value="Esconder" />
+        
         
         <div id="janela"></div>
     </body>

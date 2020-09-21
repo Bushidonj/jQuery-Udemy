@@ -9,6 +9,7 @@
         
         <script src="jquery-3.2.1.min.js"></script>
         <script>
+			// mostrar e esconder a animação com um alerta que a animação terminou clicando em mostrar //
 			$( function(e) {			
 				$('#mostrar').click( mostrarObjeto )
 				$('#esconder').click( esconderObjeto )
@@ -16,15 +17,17 @@
 			})
 			
 			function esconderObjeto() {
-			
+			  $('#janela').hide(300);
 			}
 
 			function mostrarObjeto() {
-				
-			}
+				$('#janela').show(2000, function(e) {
+			alert("Finalizou a animação");
+				});
+		}
 
 			function reverterObjeto() {
-			
+				$('#janela').toggle(300);
 			}
 		</script>        
     </head>

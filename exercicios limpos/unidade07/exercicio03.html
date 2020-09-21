@@ -10,18 +10,21 @@
         
         <script src="jquery-3.2.1.min.js"></script>
         <script>
-			$( function(e) {			
+		// teste com slide up e down com janela de alerta "finalizou" clicando no botãp (mostrar) ...//
+		$( function(e) {			
 				$('#mostrar').click( mostrarObjeto )
 				$('#esconder').click( esconderObjeto )
 				$('#reverso').click( reverterObjeto )
 			})
 			
 			function esconderObjeto() {
-			
+			  $('#janela').slideUp(500);
 			}
 
 			function mostrarObjeto() {
-			
+				$('#janela').slideDown(500, function(e) {
+					alert("finalizou");
+				});
 			}
 
 		

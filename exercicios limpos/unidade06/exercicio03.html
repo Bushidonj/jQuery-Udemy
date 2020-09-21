@@ -10,6 +10,19 @@
         
         <script src="jquery-3.2.1.min.js"></script>
         <script>
+           // evento para mudar a cor do quadrado na tela do navegador//
+           function aplicarCor(e) {
+            $cor = e.data.cor;   
+            $('#janela').css('background-color',$cor);
+           }
+          
+
+             $(function() {
+                 $('#botaoazul').on("click",{cor:'blue'}, aplicarCor);
+                 $('#botaovermelho').on("click",{cor:'red'}, aplicarCor);
+                 $('#botaoverde').on("click",{cor:'green'}, aplicarCor);
+                })
+
 
 	 	</script>        
     </head>
